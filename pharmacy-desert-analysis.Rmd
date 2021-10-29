@@ -1,0 +1,32 @@
+---
+title: "pharmacy-desert-analysis"
+author: "Rachel Logan"
+date: "10/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+# Load libraries
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(tidycensus)
+
+# Store census API key
+census_api_key("af85ba467db0a722a2f7821d18e3f0b6b5318e1c")
+```
+
+```{r}
+# Get zip code census data
+MD_zcta_stats <- get_acs(
+  geography = "zcta", 
+  state="MD",
+  variables = c("B01001_001","B02001_002","B19013_001"))
+
+```
