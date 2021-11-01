@@ -1,0 +1,137 @@
+name,address,city,state,zip,census_tract,match_made
+Accokeek Drug Health Mart Pharmacy,15789 Livingston Road ,Accokeek,MD,20607,801310,Match
+B And C Health Services Limited Liability Company Pharmacy,10905 Fort Washington Road,Fort Washington,MD,20744,,No_Match
+Bowie Pharmacy,14999 Health Center Drive ,Bowie,MD,20716,800515,Match
+CVS Pharmacy,5100 Brown Station Road,Upper Marlboro,MD,20772,800606,Match
+CVS Pharmacy,11729 Beltsville Drive ,Beltsville,MD,20705,807407,Match
+CVS Pharmacy,7012 Marlboro Pike ,Forestville,MD,20747,,No_Match
+CVS Pharmacy,7408 Annapolis Road,Landover Hills,MD,20784,,No_Match
+CVS Pharmacy,3611 Bladensburg Road ,Colmar Manor,MD,20722,804400,Match
+CVS Pharmacy,5922 Martin Luther King Junior Highway ,Seat Pleasant,MD,20743,802901,Match
+CVS Pharmacy,7300 Baltimore Avenue ,College Park,MD,20740,980000,Match
+CVS Pharmacy,6200 Central Avenue ,Seat Pleasant,MD,20743,,No_Match
+CVS Pharmacy,6920 Laurel Bowie Road ,Bowie,MD,20715,800409,Match
+CVS Pharmacy,7583 Crain Highway ,Upper Marlboro,MD,20772,800707,Match
+CVS Pharmacy,13320 Laurel Bowie Road ,Laurel,MD,20708,800218,Match
+CVS Pharmacy,11100 Baltimore Avenue ,Beltsville,MD,20705,807404,Match
+CVS Pharmacy,7050 Allentown Road ,Camp Springs,MD,20748,,No_Match
+CVS Pharmacy,6516 Landover Road ,Cheverly,MD,20785,804102,Match
+CVS Pharmacy,15100 Baltimore Avenue ,Laurel,MD,20707,,No_Match
+CVS Pharmacy,1334 Crain Highway ,Bowie,MD,20716,,No_Match
+CVS Pharmacy,8859 Branch Avenue ,Clinton,MD,20735,801217,Match
+CVS Pharmacy,11906 Livingston Road ,Fort Washington,MD,20749,,No_Match
+CVS Pharmacy,6001 Highbridge Road ,Bowie,MD,20720,800409,Match
+CVS Pharmacy,3605 East-West Highway ,Hyattsville,MD,20782,,No_Match
+CVS Pharmacy,28 Watkins Park Drive ,Upper Marlboro,MD,20774,,No_Match
+CVS Pharmacy,3714 Branch Avenue ,Temple Hills,MD,20748,801908,Match
+CVS Pharmacy,8201 Annapolis Road ,New Carrollton,MD,20784,,No_Match
+CVS Pharmacy,5621 Sargent Road ,Hyattsville,MD,20782,805000,Match
+CVS Pharmacy,5870 Silver Hill Road ,District Heights,MD,20747,802407,Match
+CVS Pharmacy,3130 Queens Chapel Road ,Hyattsville,MD,20782,804900,Match
+CVS Pharmacy,7607 Greenbelt Road ,Greenbelt,MD,20770,806710,Match
+CVS Pharmacy,5910 Greenbelt Road ,Greenbelt,MD,20770,806714,Match
+CVS Pharmacy,320 Domer Avenue ,Laurel,MD,20707,800108,Match
+CVS Pharmacy,4901 Indian Head Highway ,Oxon Hill,MD,20745,801500,Match
+CVS Pharmacy,7041 Martin Luther King Junior Highway ,Hyattsville,MD,20785,,No_Match
+CVS Pharmacy,8201 Oxon Hill Road ,Fort Washington,MD,20744,801411,Match
+CVS Pharmacy,7939 New Hampshire Avenue ,Hyattsville,MD,20783,805601,Match
+CVS Pharmacy,6221 Oxon Hill Road ,Oxon Hill,MD,20745,801405,Match
+CVS Pharmacy,10590 Campus Way South ,Upper Marlboro,MD,20774,803527,Match
+CVS Pharmacy,5707 Riverdale Road ,Riverdale Park,MD,20737,,No_Match
+CVS Pharmacy,9420 Lanham Severn Road ,Lanham,MD,20706,803606,Match
+Co-Op Pharmacy,121 Centerway ,Greenbelt,MD,20770,806708,Match
+Comcare Care Pharmacy,15431 excelsior Drive ,Bowie,MD,20716,,No_Match
+Costco Pharmacy,10925 Baltimore Avenue ,Beltsville,MD,20705,,No_Match
+Costco Pharmacy,7601 Matapeake Business Drive ,Brandywine,MD,20613,,No_Match
+East Pines Pharmacy And Medical Equipment Pharmacy,6003 66th Avenue ,East Riverdale,MD,20737,803803,Match
+Family Care Pharmacy III Incorporated Pharmacy,6196 Oxon Hill Road ,Oxon Hill,MD,20745,,No_Match
+Giant Pharmacy,6000 Greenbelt Road ,Greenbelt,MD,20770,806713,Match
+Giant Pharmacy,5500 Silver Hill Road ,District Heights,MD,20747,802406,Match
+Giant Pharmacy,10480 Campus Way South ,Kettering,MD,20774,803527,Match
+Giant Pharmacy,9580 Livingston Road ,Fort Washington,MD,20744,801307,Match
+Giant Pharmacy,7546 Annapolis Road ,Hyattsville,MD,20784,,No_Match
+Giant Pharmacy,5815 Eastern Avenue Northeast ,Hyattsville,MD,20782,805000,Match
+Giant Pharmacy,5700 Crain Highway ,Upper Marlboro,MD,20772,800605,Match
+Giant Pharmacy,20706 Greenbelt Road ,Lanham,MD,20706,,No_Match
+Giant Pharmacy,15520 Annapolis Road ,Bowie,MD,20715,800402,Match
+Giant Pharmacy,1009 Fairlawn Avenue ,Laurel,MD,20707,,No_Match
+Giant Pharmacy,20 Audrey Lane ,Oxon Hill,MD,20745,801500,Match
+Giant Pharmacy,3500 Crain Highway ,Bowie,MD,20716,,No_Match
+Giant Pharmacy,3104 Queens Chapel Road ,Hyattsville,MD,20782,804900,Match
+Giant Pharmacy,7074 Allentown Road ,Camp Springs,MD,20748,,No_Match
+Giant Pharmacy,7025 Berry Road ,Accokeek,MD,20607,,No_Match
+Giant Pharmacy,4119 Branch Avenue ,Marlow Heights,MD,20748,801802,Match
+Giant Pharmacy,3521 East-West Highway ,Hyattsville,MD,20782,,No_Match
+Giant Pharmacy,8899 Woodyard Road ,Clinton,MD,20735,801214,Match
+Gig Pharmacy Limited Liability Company Pharmacy,3611 Branch Avenue ,Temple Hills,MD,20748,,No_Match
+Greenbelt Pharmacy,9801 Greenbelt Road ,Lanham,MD,20706,800412,Match
+Health Center Pharmacy,140 Campus Drive ,College Park,MD,20740,,No_Match
+Hollywood Pharmacy,9901 Rhode Island Avenue,College Park,MD,20740,,No_Match
+Hope For All Pharmacy And Stores Pharmacy,4588 Beech Road ,Marlow Heights,MD,20748,,No_Match
+Kaiser Permanente Camp Springs Medical Center Pharmacy,6104 Old Branch Avenue ,Temple Hills,MD,20748,,No_Match
+Kaiser Permanente Largo Medical Center Pharmacy,1221 Mercantile Lane ,Upper Marlboro,MD,20774,803514,Match
+Kaiser Permanente Marlow Heights Medical Center Pharmacy,5100 Auth Way ,Camp Springs,MD,20746,801905,Match
+Kaiser Permanente Prince Georges Medical Office Pharmacy,6525 Belcrest Road ,Hyattsville,MD,20782,,No_Match
+Kay Cee Health Mart Pharmacy,6110 Old Silver Hill Road ,District Heights,MD,20747,802407,Match
+Kmart Pharmacy,8829 Greenbelt Road ,Greenbelt,MD,20770,806711,Match
+Laurel Pharmacy,7350 Van Dusen Road ,Laurel,MD,20707,800212,Match
+Lawsons Health Mart Pharmacy,3415 Hamilton Street ,Hyattsville,MD,20781,806100,Match
+Main Street Pharmacy,653 Main Street ,Laurel,MD,20707,800102,Match
+Mednovations Pharmacy,316 Talbott Avenue ,Laurel,MD,20707,800103,Match
+New Era Care Pharmacy,1446 Addison Road South ,Capitol Heights,MD,20743,,No_Match
+Padek Healthcare Pharmacy,5403a Annapolis Road ,Bladensburg,MD,20710,804300,Match
+Pharmerica Pharmacy,12240 Kiln Court ,Beltsville,MD,20705,807408,Match
+Quality Of Life Pharmacy,8900 Edgeworth Drive ,Capitol Heights,MD,20743,802204,Match
+Rite Aid Pharmacy,1823 East-West Highway ,Adelphi,MD,20783,805202,Match
+Rite Aid Pharmacy,3250 Superior Lane ,Bowie,MD,20715,800504,Match
+Rite Aid Pharmacy,9530 Crain Highway ,Upper Marlboro,MD,20772,800705,Match
+Rite Aid Pharmacy,5600 Silver Hill Road ,District Heights,MD,20747,802406,Match
+Rite Aid Pharmacy,8048 New Hampshire Avenue ,Hyattsville,MD,20783,,No_Match
+Rite Aid Pharmacy,5741 Silver Hill Road ,District Heights,MD,20747,802103,Match
+Rite Aid Pharmacy,10474 Baltimore Avenue ,Beltsville,MD,20705,807405,Match
+Rite Aid Pharmacy,8934 Woodyard Road ,Clinton,MD,20735,801217,Match
+Rite Aid Pharmacy,9139 Riggs Road ,Adelphi,MD,20783,805904,Match
+Rite Aid Pharmacy,6130 Baltimore Avenue ,Riverdale Park,MD,20737,806501,Match
+Rite Aid Pharmacy,12701 Laurel Bowie Road ,Laurel,MD,20708,800211,Match
+Rite Aid Pharmacy,9810 Apollo Drive ,Largo,MD,20774,803514,Match
+Rite Aid Pharmacy,6806 Riverdale Road ,East Riverdale,MD,20737,,No_Match
+Safeway Pharmacy,6300 Central Avenue ,Seat Pleasant,MD,20743,,No_Match
+Safeway Pharmacy,4600 Cooper Lane ,Hyattsville,MD,20784,803801,Match
+Safeway Pharmacy,5800 Silver Hill Road ,District Heights,MD,20747,802407,Match
+Safeway Pharmacy,6235 Oxon Hill Road  ,Oxon Hill,MD,20745,801405,Match
+Safeway Pharmacy,7595 Greenbelt Road ,Greenbelt,MD,20770,806710,Match
+Safeway Pharmacy,15916 Crain Highway ,Brandywine,MD,20613,801003,Match
+Safeway Pharmacy,3268 Superior Lane ,Bowie,MD,20715,800504,Match
+Safeway Pharmacy,4101 Northview Drive ,Bowie,MD,20716,800516,Match
+Safeway Pharmacy,50 Watkins Park Drive ,Upper Marlboro,MD,20774,,No_Match
+Safeway Pharmacy,4600 Cooper Lane ,Hyattsville,MD,20784,803801,Match
+Safeway Pharmacy,12410 Fairwood Parkway ,Bowie,MD,20720,,No_Match
+Safeway Pharmacy,3511 Hamilton Street ,Hyattsville,MD,20782,806100,Match
+Safeway Pharmacy,7605 Crain Highway ,Upper Marlboro,MD,20772,800707,Match
+Safeway Pharmacy,990 Swan Creek Road East ,Fort Washington,MD,20744,801307,Match
+Safeway Pharmacy,2346 Iverson Street ,Temple Hills,MD,20748,,No_Match
+Safeway Pharmacy,5800 Silver Hill Road ,District Heights,MD,20747,802407,Match
+Sears Essentials Kmart Pharmacy,8827 Woodyard Road ,Clinton,MD,20735,801214,Match
+Shalom Pharmacy,9131 Piscataway Road ,Clinton,MD,20735,801217,Match
+Shoppers Pharmacy,10501 Martin Luther King Junior Highway ,Bowie,MD,20720,,No_Match
+Shoppers Pharmacy,6881 New Hampshire Avenue,Takoma Park,MD,20912,805202,Match
+Shoppers Pharmacy,4720 Cherry Hill Road ,College Park,MD,20740,807301,Match
+Shoppers Pharmacy,6300 Coventry Way ,Clinton,MD,20735,801211,Match
+Shoppers Pharmacy,7790 Riverdale Road ,New Carrollton,MD,20735,803610,Match
+Shoppers Pharmacy,6111 Livingston Road ,Oxon Hill,MD,20745,801405,Match
+Shoppers Pharmacy,2950 Donnell Drive ,Forestville,MD,20747,802103,Match
+Shoppers Pharmacy,13600 Baltimore Avenue ,Laurel,MD,20707,800212,Match
+Supreme Pharmacy And Medical Supplies Pharmacy,7936 Johnson Avenue ,Glenarden,MD,20706,803602,Match
+Target Pharmacy,4600 Mitchellville Road ,Bowie,MD,20716,800516,Match
+Target Pharmacy,10500 Campus Way South ,Kettering,MD,20774,803527,Match
+Target Pharmacy,15922 Crain Highway ,Brandywine,MD,20613,801003,Match
+Target Pharmacy,10401 Martin Luther King Junior Highway ,Bowie,MD,20720,,No_Match
+Target Pharmacy,3101 Donnell Drive ,District Heights,MD,20747,802103,Match
+Target Pharmacy,6100 Greenbelt Road ,Greenbelt,MD,20770,806713,Match
+Target Pharmacy,3500 East-West Highway ,Hyattsville,MD,20782,,No_Match
+The Medicine Shoppe Pharmacy,7053 Allentown Road ,Camp Springs,MD,20748,,No_Match
+Twins Care Pharmacy,6201 Greenbelt Road ,College Park,MD,20770,,No_Match
+Walgreens Pharmacy,9001 Woody Terrace ,Clinton,MD,20735,,No_Match
+Walmart Pharmacy,6210 Annapolis Road ,Landover Hills,MD,20784,803801,Match
+Walmart Pharmacy,8745 Branch Avenue ,Clinton,MD,20735,801217,Match
+Walmart Pharmacy,3300 Crain Highway ,Bowie,MD,20716,,No_Match

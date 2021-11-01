@@ -21,12 +21,38 @@ library(tidycensus)
 # Store census API key
 census_api_key("af85ba467db0a722a2f7821d18e3f0b6b5318e1c")
 ```
+We want to find stats for Prince George's County.
+We want, specifically, total population and white population to make percent nonwhite
+and car ownership per census tract in Prince George's County.
+
 
 ```{r}
 # Get zip code census data
-MD_zcta_stats <- get_acs(
-  geography = "zcta", 
-  state="MD",
-  variables = c("B01001_001","B02001_002","B19013_001"))
+
+PGdata <- get_acs(geography = 'tract', 
+                   state="MD",
+                   county="Prince George's",
+                   variables = c(total_pop = "B01001_001", 
+                                 white_pop = "B02001_002", 
+                                 perc_no_cars = "DP04_0058P",
+                   year = 2020, 
+                   geometry = FALSE)) %>% 
+          select(GEOID, variable, estimate) %>%
+          pivot_wider(names_from=variable, values_from=estimate) %>% 
+          mutate(pct_nonwhite = 100-round(white_pop/total_pop,2)*100)
+```
+
+
+```{r}
+#Loading pharmacy data
+county_office_pharmacies <- read.csv('county-office-pharmacies.csv') %>% 
+  clean_names()
+
+pharmacies_by_tract<-county_office_pharmacies %>% 
+  group_by(census_tract) %>% 
+  count() %>% 
+  mutate(census_tract = paste0("24033",census_tract))
+
+
 
 ```
