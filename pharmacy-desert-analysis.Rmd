@@ -17,6 +17,7 @@ library(tidyverse)
 library(janitor)
 library(readxl)
 library(tidycensus)
+library(sf)
 
 # Store census API key
 census_api_key("af85ba467db0a722a2f7821d18e3f0b6b5318e1c")
@@ -28,18 +29,41 @@ and car ownership per census tract in Prince George's County.
 
 ```{r}
 # Get zip code census data
+my_vars <- c(total_pop = "B01001_001", 
+                                 white_pop = "B02001_002", 
+                                 perc_no_cars = "DP04_0058P")
 
-PGdata <- get_acs(geography = 'tract', 
+
+PG_shapes <- get_acs(geography = 'tract', 
                    state="MD",
                    county="Prince George's",
-                   variables = c(total_pop = "B01001_001", 
-                                 white_pop = "B02001_002", 
-                                 perc_no_cars = "DP04_0058P",
-                   year = 2020, 
-                   geometry = FALSE)) %>% 
+                   variables = my_vars,
+                   geometry = TRUE) %>% 
+  select(GEOID,NAME,geometry)
+
+PG_demographics <- get_acs(geography = 'tract', 
+                   state="MD",
+                   county="Prince George's",
+                   variables = my_vars,
+                   geometry = FALSE) %>% 
           select(GEOID, variable, estimate) %>%
           pivot_wider(names_from=variable, values_from=estimate) %>% 
           mutate(pct_nonwhite = 100-round(white_pop/total_pop,2)*100)
+
+write_csv(PG_demographics,"pg_demographics.csv")
+```
+
+
+```{r}
+#dealing with centroids
+centers <-PG_shapes %>% 
+  unique() %>% 
+  st_centroid() %>% 
+  mutate(latitude = unlist(map(geometry,1)), longitude = unlist(map(geometry,2)))
+
+write.csv(centers,"centers_census_tracts.csv")
+
+
 ```
 
 
@@ -53,6 +77,131 @@ pharmacies_by_tract<-county_office_pharmacies %>%
   count() %>% 
   mutate(census_tract = paste0("24033",census_tract))
 
-
+total_PG_stats <- PGdata %>% 
+  left_join(pharmacies_by_tract, by=c("GEOID" = "census_tract"))
 
 ```
+
+```{r}
+#load SafeGraph data and clean for just county
+
+all_pharmacies_MD_safe_graph <- read.csv('core_poi.csv') %>% 
+  filter(region == "MD") %>% 
+  select(location_name, brands, latitude, longitude, street_address, city, region, postal_code, closed_on)
+
+PG_cities = c("Accokeek",
+              "Adelphi",
+              "Berwyn Heights", 
+              "Brandywine",
+              "Beltsville",
+             "Bladensburg", 
+             "Bowie", 
+             "Brentwood", 
+             "Calverton",
+             "Camp Springs",
+             "Cedar Heights",
+             "Cedarville",
+             "Chillum",
+             "Clinton",
+             "Coral Hills",
+             "Capitol Heights", 
+             "Cheverly", 
+             "College Park", 
+             "Colmar Manor", 
+             "Cottage City", 
+             "Croom",
+             "District Heights", 
+             "Eagle Harbor", 
+             "East Riverdale",
+             "East Hyattsville",
+             "Edmonston", 
+             "Fairmount Heights", 
+             "Fairwood",
+             "Forest Heights", 
+             "Forestville",
+             "Fort Washington",
+             "Glassmanor",
+             "Glenarden", 
+             "Glenn Dale",
+             "Greenbelt", 
+             "Hillandale",
+             "Hillcrest Heights",
+             "Hyattsville", 
+             "Kettering",
+             "Lake Arbor",
+             "Landover",
+             "Landover Hills", 
+             "Langley Park",
+             "Lanham",
+             "Laurel", 
+             "Marlboro Village",
+             "Marlow Heights",
+             "Marlton",
+             "Mitchellville",
+             "Morningside", 
+             "Mount Rainier", 
+             "National Harbor",
+             "North Laurel",
+             "New Carrollton", 
+             "North Brentwood", 
+             "Oxon Hill",
+             "Queensland",
+             "Riverdale Park", 
+             "Seabrook",
+             "Silver Hill",
+             "South Laurel",
+             "Suitland",
+             "Seat Pleasant", 
+             "Temple Hills",
+              "Walker Mill",
+             "West Hyattsville",
+             "Woodlawn",
+             "University Park", 
+             "Upper Marlboro");
+
+PG_pharmacies_safe_graph <- all_pharmacies_MD_safe_graph %>% 
+  filter(city %in% PG_cities)
+
+to_geocode_PG_safe_graph <- PG_pharmacies_safe_graph %>% 
+  select(street_address, city, region, postal_code)
+
+write_csv(to_geocode_PG_safe_graph,'safe_graph_PG_to_geocode.csv')
+#added a row count column
+```
+
+```{r}
+#now we have the geocoded results, so weave it into og
+safe_graph_PG_geocoded <- read.csv('safe_graph_PG_geocoded.csv')
+matched_safe_graph_geocoded <- safe_graph_PG_geocoded %>% 
+  filter(matchedness == "Match")
+
+write_csv(matched_safe_graph_geocoded,"matched_safegraph.csv")
+
+no_match_safe_graph_geocoded <- safe_graph_PG_geocoded %>% 
+  filter(matchedness == "No_Match")
+
+sg_pharmacies_by_tract <- matched_safe_graph_geocoded %>% 
+  filter(county_code == "33") %>% 
+  group_by(tract_code) %>% 
+  summarize(count = n())
+
+write_csv(sg_pharmacies_by_tract,"pharms_by_tract_sg.csv")
+```
+
+```{r}
+#distance from each center to each pharmacy (matched)
+distances <-  read_xlsx("distance_calcs.xlsx",sheet=3)
+
+driving_time <- as.data.frame(do.call(cbind,lapply(distances,function(x) x*60/25*1.417))) %>% 
+  mutate(pharm_id = as.numeric(pharm_id)*25/60/1.417)
+
+glimpse(driving_time)
+
+write_csv(driving_time,"driving_time.csv")
+
+```
+
+
+
+
+
