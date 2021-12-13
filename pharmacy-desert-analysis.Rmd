@@ -202,6 +202,26 @@ write_csv(driving_time,"driving_time.csv")
 ```
 
 
+```{r}
+walking_time <- as.data.frame(do.call(cbind,lapply(distances,function(x) x*60/3*1.417))) %>% 
+  mutate(pharm_id = as.numeric(pharm_id)*3/60/1.417)
+
+write_csv(driving_time,"walking_time.csv")
+
+top_3_pharms_per_tract <- walking_time %>% 
+  pivot_longer(-pharm_id, names_to = "census_tract_id", values_to = "walking_time") %>% 
+  group_by(census_tract_id) %>% 
+  slice_min(walking_time, n = 3) %>% 
+  pivot_wider(names_from = "census_tract_id", values_from = "walking_time")
+
+write_csv(top_3_pharms_per_tract, "top_walking_time.csv")
+
+ 
+
+  
+```
+
+
 
 
 
